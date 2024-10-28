@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Produto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form method="POST" autocomplete="off" name="cadastrar-produto" id="produto-form" action="https://script.google.com/macros/s/AKfycbzcVyVgj-IQwvoBxmA3qt06X8pTdRKD1M-VpyZzmLm8nTjnQjtoOLX1KcqmzIojkWip/exec">
+            <h1>Cadastrar Produto</h1>
+            <input type="text" name="name" placeholder="Nome do Produto" required>
+            <input type="number" name="price" placeholder="Preço" step="0.01" min="0" required>
+            <input type="number" name="quantity" placeholder="Quantidade" min="0" required>
+            <input type="url" name="image" placeholder="URL da Imagem" required>
+            <fieldset>
+                <legend>Categoria:</legend>
+                <label>
+                    <input type="radio" name="category" value="lanche" required>
+                    Lanche
+                </label>
+                <label>
+                    <input type="radio" name="category" value="bebida" required>
+                    Bebida
+                </label>
+                <label>
+                    <input type="radio" name="category" value="doce" required>
+                    Doce
+                </label>
+            </fieldset>
+            <input type="submit" value="Cadastrar Produto" id="submit">
+        </form>
+        <div id="feedback"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
